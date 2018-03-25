@@ -1,0 +1,17 @@
+FROM alpine
+LABEL author="bala"
+
+COPY go-docker-poc /app/.
+ENTRYPOINT [ "/app/go-docker-poc" ]
+
+# FROM golang:alpine
+# LABEL author=babuj
+
+# ENV SOURCES /go/src/github.com/babuj/generic-micro
+# COPY . ${SOURCES}
+# RUN cd ${SOURCES} && CGO_ENABLED=0 go install
+
+# ENV PORT 8080
+# ENV NAME Echo
+# EXPOSE 8080
+# ENTRYPOINT [ "/go/bin/generic-micro" ]
